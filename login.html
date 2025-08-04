@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Firebase v9 compat scripts (for plain HTML use) -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-auth-compat.js"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center px-4">
+
+  <div class="max-w-md w-full bg-white p-10 rounded-xl shadow-lg">
+    <h1 id="login-title" class="text-3xl font-bold mb-8 text-center text-orange-600">Student Login</h1>
+
+    <form id="login-form" class="space-y-6" autocomplete="off">
+      <div>
+        <label for="email" class="block mb-2 font-semibold text-gray-700">Email Address</label>
+        <input type="email" id="email" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" />
+      </div>
+
+      <div>
+        <label for="password" class="block mb-2 font-semibold text-gray-700">Password</label>
+        <input type="password" id="password" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" />
+      </div>
+
+      <button type="submit" class="w-full bg-gradient-to-r from-orange-500 to-rose-500 hover:from-rose-500 hover:to-orange-500 text-white font-semibold py-3 rounded-lg shadow-lg transition">
+        Log In
+      </button>
+    </form>
+
+    <p id="error-msg" class="mt-4 text-red-600 text-center"></p>
+  </div>
+
+  <script>
+    // Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyB-8y76WQuco9fjQzmgg0iTMw6UenH2fus",
+      authDomain: "ict-hub-651ee.firebaseapp.com",
+      projectId: "ict-hub-651ee",
+      storageBucket: "ict-hub-651ee.appspot.com",
+      messagingSenderId: "563022016498",
+      appId: "1:563022016498:web:2b5978884ec332d005456b",
+      measurementId: "G-4VT9G1NVY7"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    // Remove grade param usage here, just keep plain title
+    document.getElementById('login-title').textContent = `Student Login`;
+
+    // Handle login
+    const form = document.getElementById('login-form');
+    const errorMsg = document.getElementById('error-msg');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      errorMsg.textContent = '';
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      auth.signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // Redirect to dashboard WITHOUT grade in URL
+          window.location.href = 'dashboard.html';
+        })
+        .catch((error) => {
+          errorMsg.textContent = error.message;
+        });
+    });
+  </script>
+
+</body>
+</html>

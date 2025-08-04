@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - ICT Learning Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center py-5 px-6">
+      <h1 class="text-3xl font-bold text-gray-900 tracking-wide select-none cursor-default">
+        ICT Learning Hub
+      </h1>
+      
+      <!-- Desktop nav -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8 text-gray-700 font-semibold items-center">
+          <li><a href="index.html" class="hover:text-orange-600 transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-orange-600 transition">About</a></li>
+          <li><a href="academics.html" class="hover:text-orange-600 transition">Academics</a></li>
+          <li><a href="resources-main page.html" class="hover:text-orange-600 transition">Resources</a></li>
+          <li><a href="contact-main.html" class="hover:text-orange-600 transition">Contact</a></li>
+          <li>
+            <a href="login.html" 
+               class="ml-4 inline-block bg-gradient-to-r from-orange-500 to-rose-500 hover:from-rose-500 hover:to-orange-500 
+                      text-white font-semibold py-2 px-5 rounded-full shadow-lg transition duration-300">
+              Student Login
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle navigation menu">
+        <svg class="w-8 h-8 text-gray-900 text-orange-500" fill="" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+          <line x1="3" y1="7" x2="21" y2="7" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="17" x2="21" y2="17" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+      <ul class="flex flex-col space-y-4 py-4 px-6 text-gray-700 font-semibold">
+        <li><a href="index.html" class="hover:text-orange-600 transition block">Home</a></li>
+        <li><a href="about.html" class="hover:text-orange-600 transition block">About</a></li>
+        <li><a href="academics.html" class="hover:text-orange-600 transition block">Academics</a></li>
+        <li><a href="resources-main page.html" class="hover:text-orange-600 transition block">Resources</a></li>
+        <li><a href="contact-main.html" class="hover:text-orange-600 transition block">Contact</a></li>
+        <li>
+          <a href="login.html" 
+             class="inline-block bg-gradient-to-r from-orange-500 to-rose-500 hover:from-rose-500 hover:to-orange-500 
+                    text-white font-semibold py-2 px-5 rounded-full shadow-lg transition duration-300 w-full text-center">
+            Student Login
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Main Content -->
+  <main class="container mx-auto max-w-screen-md px-4 sm:px-6 md:px-8 py-16 space-y-12">
+  <h2 class="text-4xl font-extrabold text-gray-900 text-center leading-tight sm:leading-snug">
+    About ICT Learning Hub
+  </h2>
+
+  <section class="text-gray-700 leading-relaxed text-lg space-y-6">
+    <p>
+      ICT Learning Hub was created by <strong>Pradeep Achula Perera</strong>, an experienced ICT consultant with over a decade of expertise in both education and technology fields. His passion lies in empowering students with practical ICT skills and fostering a love for learning in a secure, supportive environment.
+    </p>
+
+    <p>
+      Recognizing the challenges students face in managing and continuing their ICT projects outside the classroom, he envisioned a platform that bridges school and home learning seamlessly. ICT Learning Hub provides students a reliable place to save projects, track progress, and access resources anytime, anywhere.
+    </p>
+
+    <p>
+      Our approach focuses on <em>security</em>, <em>ease of use</em>, and <em>parental engagement</em>, ensuring students’ work remains private and protected while keeping parents informed and involved in their child’s educational journey.
+    </p>
+  </section>
+
+  <section>
+    <h3 class="text-3xl font-semibold text-gray-900 mb-6 text-center">Our Mission & Philosophy</h3>
+    <p class="text-gray-700 leading-relaxed text-lg max-w-xl mx-auto">
+      We believe technology is a powerful tool for growth when used responsibly. Our mission is to equip students with the knowledge, tools, and confidence they need to excel in ICT subjects and beyond. We strive to create a nurturing digital space that encourages creativity, discipline, and continuous learning.
+    </p>
+  </section>
+
+  <section>
+    <h3 class="text-3xl font-semibold text-gray-900 mb-6 text-center">Benefits for Students & Parents</h3>
+    <ul class="list-disc list-inside text-gray-700 max-w-xl mx-auto space-y-3 text-lg">
+      <li><strong>Secure Student Accounts:</strong> Each student gets a unique login to keep their projects safe and private.</li>
+      <li><strong>Access Anytime, Anywhere:</strong> Work on projects at school or home without losing progress.</li>
+      <li><strong>Progress Tracking:</strong> Students can view their work history and milestones.</li>
+      <li><strong>Parental Involvement:</strong> Parents get insights into their child’s learning journey and achievements.</li>
+      <li><strong>Resource Hub:</strong> Easy access to study materials, software downloads, and tutorials.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 class="text-3xl font-semibold text-gray-900 mb-6 text-center">Looking Ahead</h3>
+    <p class="text-gray-700 leading-relaxed text-lg max-w-xl mx-auto">
+      We are committed to continuously improving ICT Learning Hub based on feedback from students, parents, and educators. Upcoming features include enhanced collaboration tools, interactive lessons, and personalized learning paths to further support each student’s unique needs.
+    </p>
+  </section>
+</main>
+<script>
+  // Toggle mobile menu
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-10 mt-auto">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center max-w-6xl">
+      <p class="mb-6 md:mb-0 text-gray-600">&copy; 2025 ICT Learning Hub. All rights reserved.</p>
+      <div class="flex space-x-8 text-gray-600">
+        <a href="#" class="hover:text-orange-500 transition">Facebook</a>
+        <a href="#" class="hover:text-orange-500 transition">Twitter</a>
+        <a href="#" class="hover:text-orange-500 transition">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

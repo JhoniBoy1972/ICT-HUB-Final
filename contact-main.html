@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact-us - ICT Learning Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+  <!-- Header -->
+   <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center py-5 px-6">
+      <h1 class="text-3xl font-bold text-gray-900 tracking-wide select-none cursor-default">
+        ICT Learning Hub
+      </h1>
+      
+      <!-- Desktop nav -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8 text-gray-700 font-semibold items-center">
+          <li><a href="index.html" class="hover:text-orange-600 transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-orange-600 transition">About</a></li>
+          <li><a href="academics.html" class="hover:text-orange-600 transition">Academics</a></li>
+          <li><a href="resources-main page.html" class="hover:text-orange-600 transition">Resources</a></li>
+          <li><a href="contact-main.html" class="hover:text-orange-600 transition">Contact</a></li>
+          <li>
+            <a href="login.html" 
+               class="ml-4 inline-block bg-gradient-to-r from-orange-500 to-rose-500 hover:from-rose-500 hover:to-orange-500 
+                      text-white font-semibold py-2 px-5 rounded-full shadow-lg transition duration-300">
+              Student Login
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle navigation menu">
+        <svg class="w-8 h-8 text-gray-900 text-orange-500" fill="" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+          <line x1="3" y1="7" x2="21" y2="7" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="17" x2="21" y2="17" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+      <ul class="flex flex-col space-y-4 py-4 px-6 text-gray-700 font-semibold">
+        <li><a href="index.html" class="hover:text-orange-600 transition block">Home</a></li>
+        <li><a href="about.html" class="hover:text-orange-600 transition block">About</a></li>
+        <li><a href="academics.html" class="hover:text-orange-600 transition block">Academics</a></li>
+        <li><a href="resources-main page.html" class="hover:text-orange-600 transition block">Resources</a></li>
+        <li><a href="contact-main.html" class="hover:text-orange-600 transition block">Contact</a></li>
+        <li>
+          <a href="login.html" 
+             class="inline-block bg-gradient-to-r from-orange-500 to-rose-500 hover:from-rose-500 hover:to-orange-500 
+                    text-white font-semibold py-2 px-5 rounded-full shadow-lg transition duration-300 w-full text-center">
+            Student Login
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <main class="max-w-3xl mx-auto py-10">
+    <h2 class="text-2xl font-bold mb-6">Get in Touch</h2>
+
+    <form id="contactForm" class="bg-white shadow-lg rounded-xl p-10 space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium">Your Name</label>
+        <input type="text" id="name" class="w-full mt-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium">Email Address</label>
+        <input type="email" id="email" class="w-full mt-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium">Message</label>
+        <textarea id="message" rows="4" class="w-full mt-9 border border-gray-300 rounded-lg p-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 " placeholder="Type your message here..." required></textarea>
+      </div>
+
+      <button type="submit" id="submit" class="w-full bg-orange-500 text-white font-semibold py-2 rounded-lg hover:bg-yellow-600 transition">Send Message</button>
+    </form>
+
+    <div id="contactStatus" class="mt-4 text-sm font-medium text-green-600 hidden">Message Submitted!</div>
+    <div id="contactStatusno" class="mt-4 text-sm font-medium text-red-600 hidden">Message Not Submitted!</div>
+  </main>
+
+  <script src="contact-main.js"></script>
+  <script>
+  // Toggle mobile menu
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+</body>
+</html>
