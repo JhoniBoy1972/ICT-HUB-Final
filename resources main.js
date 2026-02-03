@@ -1,25 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const resources = [
     {
-      title: "ICT Theory Notes (Grades 10–11)",
-      description: "Structured theory notes covering hardware, software, networking, and data representation.",
-      link: "https://example.com/ict-theory-notes.pdf"
-    },
-    {
-      title: "ICT Past Papers & Marking Schemes",
+    title: "ICT Past Papers & Marking Schemes Ordinary level",
       description: "School and national exam past papers with official marking schemes.",
-      link: "https://example.com/ict-past-papers.pdf"
+      link: "https://www.google.com/amp/s/pastpapers.wiki/gce-o-l-information-communication-technology-past-papers-with-answers/%3famp"
     },
     {
       title: "ICT Practical Workbook",
       description: "Hands-on exercises for Word, Excel, PowerPoint, and basic programming concepts.",
-      link: "https://example.com/ict-practical-workbook.pdf"
+      link: "http://www.edupub.gov.lk/BooksDownload.php"
     },
-    {
-      title: "ICT Revision Diagrams & Mind Maps",
-      description: "Visual summaries for databases, logic gates, networks, and system components.",
-      link: "https://example.com/ict-diagrams.pdf"
-    }
   ];
 
   const resourceList = document.getElementById("resourceList");
